@@ -1,0 +1,70 @@
+version: "3.0"
+
+stories:
+
+- story: user wanna play game
+  steps:
+  - intent: greet
+  - action: utter_play
+  - intent: inform
+  - action: action_play_rps
+  - action: utter_play_again
+  - intent: affirm
+  - action: utter_play
+  - intent: inform
+  - action: action_play_rps
+
+- story: user doesn't wanna play
+  steps:
+  - intent: greet
+  - action: utter_play
+  - intent: inform
+  - action: action_play_rps
+  - action: utter_play_again
+  - intent: deny
+  - action: utter_goodbye
+  
+
+# - story: user wanna play again
+#   steps:
+#   - intent: greet
+#   - action: utter_play_again
+#   - intent: affirm
+#   - action: utter_play
+#   - intent: inform
+#   - action: action_play_rps
+
+# - story: user don't wanna play again!
+#   steps:
+#   - action: utter_play_again
+#   - intent: deny
+#   - action: utter_goodbye
+
+
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
